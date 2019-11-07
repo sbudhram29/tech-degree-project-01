@@ -1,8 +1,8 @@
 // array of quotes stored in Object
-var quotes = [
+const quotes = [
     {
         quote: "The most common way people give up their power is by thinking they don’t have an" +
-                "y.",
+            "y.",
         source: "Alice Walker"
     }, {
         quote: "The mind is everything. What you think you become.",
@@ -26,13 +26,13 @@ var quotes = [
         category: "Self Development"
     }, {
         quote: "Change will not come if we wait for some other person or some other time. We are" +
-                " the ones we have been waiting for. We are the change that we seek.",
+            " the ones we have been waiting for. We are the change that we seek.",
         source: "Barack Obama",
         category: "Powerful",
         year: 2008
     }, {
         quote: "If you want to know what a man's like, take a good look at how he treats his inf" +
-                "eriors, not his equals.",
+            "eriors, not his equals.",
         source: "JK Rowling",
         citation: "Harry Potter and the Goblet of Fire",
         category: "Fun",
@@ -42,29 +42,29 @@ var quotes = [
 ];
 
 //array of colors
-var colors = ['ForestGreen', 'DodgerBlue', 'FireBrick', 'DarkSlateGray', 'DarkOrchid'];
+const colors = [ 'ForestGreen', 'DodgerBlue', 'FireBrick', 'DarkSlateGray', 'DarkOrchid' ];
 
 // returns a random quotes based on Math.random and length of 'quote' array
-var getRandomQuote = function (quoteArray) {
+const getRandomQuote = function (quoteArray) {
 
-    return quotes[Math.floor(Math.random() * quoteArray.length)];
+    return quotes[ Math.floor(Math.random() * quoteArray.length) ];
 }
 // get random background color from color array get the element in quote-box and
-var randomColor = function () {
-    return colors[Math.floor(Math.random() * colors.length)];
+const randomColor = function () {
+    return colors[ Math.floor(Math.random() * colors.length) ];
 }
 // change innerHTML to quote details
-var printQuote = function () {
-    var quoteDiv = document.getElementById('quote-box');
-    var quote = getRandomQuote(quotes);
-    var bgColor = randomColor();
+const printQuote = function () {
+    const quoteDiv = document.getElementById('quote-box');
+    let quote = getRandomQuote(quotes);
+    let bgColor = randomColor();
     document.body.style.backgroundColor = bgColor;
     document
         .getElementById('loadQuote')
         .style
         .backgroundColor = bgColor;
 
-    var quoteHtml = "";
+    let quoteHtml = "";
     quoteHtml += '<p class="quote">' + quote.quote + '</p>'
     quoteHtml += '<p class="source">' + quote.source;
 
